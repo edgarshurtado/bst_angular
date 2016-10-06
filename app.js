@@ -4,14 +4,18 @@ blackShadder.config(function($routeProvider){
     $routeProvider
     .when('/', {
         templateUrl: 'pages/main.html',
-        controller: 'testController'
+        controller: 'mainController'
     })
     .when('/estudio', {
         templateUrl: 'pages/estudio.html',
-        controller: 'testController'
+        controller: 'estudioController'
     });
 })
 
-blackShadder.controller("testController", ["$scope", function($scope){
-    $scope.text = "Example text";
+blackShadder.controller("mainController", ["$scope", function($scope){
+    $scope.text = "Example text in main";
+}]);
+
+blackShadder.controller("estudioController", ["$scope", function($scope){
+    $scope.text = "Example text in estudio";
 }])
