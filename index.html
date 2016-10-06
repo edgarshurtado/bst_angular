@@ -9,43 +9,41 @@
         <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- Load Angular -->
-        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/angular-route/angular-route.min.js"></script>
 
         <!-- App angular scripts -->
         <script src="app.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#hamburger-menu"
-                    aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#hamburger-menu"
+                        aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
 
-                <div class="collapse navbar-collapse" id="hamburger-menu">
-                    <ul class="nav navbar-nav">
-                        <li><a href="">Estudio</a></li>
-                        <li><a href="">Galería</a></li>
-                        <li><a href="">Contacto</a></li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="hamburger-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="">Estudio</a></li>
+                            <li><a href="">Galería</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-
-        <div ng-controller="testController">
-            <span class="label label-default">
-                {{text}}
-            </span>
+            </nav>
+            <div ng-view></div>
         </div>
     </body>
 </html>
