@@ -1,0 +1,54 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background-image: url("../images/inicio.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0; }
+
+.main-page img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block; }
+
+.schedule-container {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px; }
+
+.schedule-box {
+  box-shadow: 3px 3px 1px #404040;
+  padding: 5px 25px 5px 25px;
+  font-size: 1.25em;
+  display: inline-block; }
+  .schedule-box.left {
+    background-color: #9b1f17;
+    color: white;
+    margin-right: 10px; }
+  .schedule-box.right {
+    background-color: black;
+    color: #9b1f17;
+    margin-right: auto; }
+
+.page-footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: right; }
+  .page-footer .fa {
+    font-size: 2.5em;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer; }
+  .page-footer .fa-facebook-official:hover {
+    color: blue; }
+  .page-footer .fa-instagram:hover {
+    color: purple; }
