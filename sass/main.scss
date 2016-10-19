@@ -25,6 +25,7 @@ body {
         margin-right: auto;
         margin-left: auto;
         display: block;
+        width: 80vw;
     }
 }
 
@@ -57,24 +58,48 @@ body {
 
 .page-footer {
     position: fixed;
-    bottom: 10px;
     width: 100%;
-    text-align: right;
+    bottom: 0;
 
-    & .fa {
+    background-color: black;
+
+    padding: 10px 20px;
+
+    .texto-follow-me{
+        margin: 10px 0 0 0;
+        padding: 0;
+        color: grey;
+    }
+
+    .col-xs-6:first-child::after{
+        content: "";
+        border-right: 2px #333 solid;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        bottom: 5px;
+    }
+
+
+    .social-link {
+        color: #333;
+
+        margin: 20px 0 0 20px;
+        display: inline-block;
+    }
+
+    .fa {
         font-size: 2.5em;
         display: inline-block;
-
-        margin-right: 10px;
 
         cursor: pointer;
     }
 
-    & .fa-facebook-official:hover {
+    .fa-facebook-official:hover {
         color: blue;
     }
 
-    & .fa-instagram:hover {
+    .fa-instagram:hover {
         color: purple;
     }
 }

@@ -16,7 +16,8 @@ body {
 .main-page img {
   margin-right: auto;
   margin-left: auto;
-  display: block; }
+  display: block;
+  width: 80vw; }
 
 .schedule-container {
   display: table;
@@ -40,13 +41,28 @@ body {
 
 .page-footer {
   position: fixed;
-  bottom: 10px;
   width: 100%;
-  text-align: right; }
+  bottom: 0;
+  background-color: black;
+  padding: 10px 20px; }
+  .page-footer .texto-follow-me {
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: grey; }
+  .page-footer .col-xs-6:first-child::after {
+    content: "";
+    border-right: 2px #333 solid;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    bottom: 5px; }
+  .page-footer .social-link {
+    color: #333;
+    margin: 20px 0 0 20px;
+    display: inline-block; }
   .page-footer .fa {
     font-size: 2.5em;
     display: inline-block;
-    margin-right: 10px;
     cursor: pointer; }
   .page-footer .fa-facebook-official:hover {
     color: blue; }
