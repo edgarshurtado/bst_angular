@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../images/inicio.jpg');
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -29,41 +30,66 @@ body {
     }
 }
 
-.schedule-container{
-    margin: 10px 0 0 0;
-    padding: 0 20px 0 20px;
-}
-
 .schedule-box {
   box-shadow: 3px 3px 1px #404040;
   font-size: 1.45em;
   text-align: center;
   padding: 5px 0 5px 0;
 
+  @media(min-width:767px){
+    width:260px;
+  }
+
   &.left {
     background-color: $primary-red;
     color: white;
+    @media(min-width:767px){
+      float: right;
+    }
   }
 
   &.right {
     background-color: black;
     color: $primary-red;
+    &:hover{
+        color: red;
+        cursor: pointer;
+    }
+
+    @media(min-width:767px){
+      float: left;
+    }
   }
+}
+.schedule-list-row{
+    margin-top: 15px;
+}
+
+.schedule-list{
+    background-color: rgba(256,256,256, 0.3);
+    margin-right: auto;
+    margin-left: auto;
+    list-style-type: none;
 }
 
 .page-footer {
-    position: fixed;
+    &.row {
+        margin: 0;
+    }
     width: 100%;
-    bottom: 0;
+    height:70px;
 
     background-color: black;
 
     padding: 10px 20px;
 
     .texto-follow-me{
-        margin: 10px 0 0 0;
         padding: 0;
+        text-align: center;
         color: grey;
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 50px;
     }
 
     .col-xs-6:first-child::after{
@@ -71,23 +97,29 @@ body {
         border-right: 2px #333 solid;
         position: absolute;
         right: 0;
-        top: 5px;
-        bottom: 5px;
+        top: 1px;
+        bottom: 9px;
     }
 
 
-    .social-link {
-        color: #333;
+    .social-links {
+        text-align: center;
+        line-height: 65px;
+        & a {
+            color: #333;
+            display: inline-block;
+        }
 
-        margin: 20px 0 0 20px;
-        display: inline-block;
+        & a:first-child{
+            margin-right: 20px;
+        }
     }
 
     .fa {
         font-size: 2.5em;
         display: inline-block;
-
         cursor: pointer;
+        font-weight: bold;
     }
 
     .fa-facebook-official:hover {

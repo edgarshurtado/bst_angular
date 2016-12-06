@@ -7,7 +7,8 @@ body, html {
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../images/inicio.jpg"); }
+  background-image: url("../images/inicio.jpg");
+  background-attachment: fixed; }
 
 .navbar {
   margin-bottom: 0;
@@ -19,47 +20,73 @@ body {
   display: block;
   height: 60vh; }
 
-.schedule-container {
-  margin: 10px 0 0 0;
-  padding: 0 20px 0 20px; }
-
 .schedule-box {
   box-shadow: 3px 3px 1px #404040;
   font-size: 1.45em;
   text-align: center;
   padding: 5px 0 5px 0; }
+  @media (min-width: 767px) {
+    .schedule-box {
+      width: 260px; } }
   .schedule-box.left {
     background-color: #9b1f17;
     color: white; }
+    @media (min-width: 767px) {
+      .schedule-box.left {
+        float: right; } }
   .schedule-box.right {
     background-color: black;
     color: #9b1f17; }
+    .schedule-box.right:hover {
+      color: red;
+      cursor: pointer; }
+    @media (min-width: 767px) {
+      .schedule-box.right {
+        float: left; } }
+
+.schedule-list-row {
+  margin-top: 15px; }
+
+.schedule-list {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none; }
 
 .page-footer {
-  position: fixed;
   width: 100%;
-  bottom: 0;
+  height: 70px;
   background-color: black;
   padding: 10px 20px; }
+  .page-footer.row {
+    margin: 0; }
   .page-footer .texto-follow-me {
-    margin: 10px 0 0 0;
     padding: 0;
-    color: grey; }
+    text-align: center;
+    color: grey;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 50px; }
   .page-footer .col-xs-6:first-child::after {
     content: "";
     border-right: 2px #333 solid;
     position: absolute;
     right: 0;
-    top: 5px;
-    bottom: 5px; }
-  .page-footer .social-link {
-    color: #333;
-    margin: 20px 0 0 20px;
-    display: inline-block; }
+    top: 1px;
+    bottom: 9px; }
+  .page-footer .social-links {
+    text-align: center;
+    line-height: 65px; }
+    .page-footer .social-links a {
+      color: #333;
+      display: inline-block; }
+    .page-footer .social-links a:first-child {
+      margin-right: 20px; }
   .page-footer .fa {
     font-size: 2.5em;
     display: inline-block;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: bold; }
   .page-footer .fa-facebook-official:hover {
     color: blue; }
   .page-footer .fa-instagram:hover {
