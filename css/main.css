@@ -5,9 +5,9 @@ body, html {
   height: 100%; }
 
 body {
-  background-image: url("../images/inicio.jpg");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-image: url("../images/inicio.jpg"); }
 
 .navbar {
   margin-bottom: 0;
@@ -17,27 +17,23 @@ body {
   margin-right: auto;
   margin-left: auto;
   display: block;
-  width: 80vw; }
+  height: 60vh; }
 
 .schedule-container {
-  display: table;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10px; }
+  margin: 10px 0 0 0;
+  padding: 0 20px 0 20px; }
 
 .schedule-box {
   box-shadow: 3px 3px 1px #404040;
-  padding: 5px 25px 5px 25px;
-  font-size: 1.25em;
-  display: inline-block; }
+  font-size: 1.45em;
+  text-align: center;
+  padding: 5px 0 5px 0; }
   .schedule-box.left {
     background-color: #9b1f17;
-    color: white;
-    margin-right: 10px; }
+    color: white; }
   .schedule-box.right {
     background-color: black;
-    color: #9b1f17;
-    margin-right: auto; }
+    color: #9b1f17; }
 
 .page-footer {
   position: fixed;

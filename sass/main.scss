@@ -8,9 +8,9 @@ body, html {
 }
 
 body {
-    background-image: url('../images/inicio.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-image: url('../images/inicio.jpg');
 }
 
 .navbar {
@@ -21,38 +21,33 @@ body {
 
 .main-page {
 
-    & img {
+    img {
         margin-right: auto;
         margin-left: auto;
         display: block;
-        width: 80vw;
+        height: 60vh;
     }
 }
 
 .schedule-container{
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
+    padding: 0 20px 0 20px;
 }
 
 .schedule-box {
   box-shadow: 3px 3px 1px #404040;
-  padding: 5px 25px 5px 25px;
-  // font-family: "Arial Rounded MT Bold";
-  font-size: 1.25em;
-  display: inline-block;
+  font-size: 1.45em;
+  text-align: center;
+  padding: 5px 0 5px 0;
 
   &.left {
     background-color: $primary-red;
     color: white;
-    margin-right: 10px;
   }
 
   &.right {
     background-color: black;
     color: $primary-red;
-    margin-right: auto;
   }
 }
 
