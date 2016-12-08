@@ -62,7 +62,7 @@ body {
   }
 }
 .schedule-list-row{
-    margin-top: 15px;
+    margin: 15px 2px 0 2px;
 }
 
 .schedule-list{
@@ -70,6 +70,14 @@ body {
     margin-right: auto;
     margin-left: auto;
     list-style-type: none;
+
+    .day {
+        font-size: bold;
+    }
+
+    & .hours,& .day {
+        text-align: center;
+    }
 }
 
 .page-footer {
@@ -85,6 +93,7 @@ body {
 
     .texto-follow-me{
         padding: 0;
+        margin: 0;
         text-align: center;
         color: grey;
         font-size: 1.3em;
@@ -97,17 +106,16 @@ body {
         border-right: 2px #333 solid;
         position: absolute;
         right: 0;
-        top: 1px;
-        bottom: 9px;
+        top: 5px;
+        bottom: 5px;
     }
 
 
     .social-links {
         text-align: center;
-        line-height: 65px;
+        padding:7px;
         & a {
             color: #333;
-            display: inline-block;
         }
 
         & a:first-child{
@@ -123,7 +131,7 @@ body {
     }
 
     .fa-facebook-official:hover {
-        color: blue;
+        color: #3B5998;
     }
 
     .fa-instagram:hover {
