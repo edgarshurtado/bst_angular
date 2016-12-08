@@ -8,54 +8,16 @@
        <div class="schedule-box left">Abierto</div>
     </div>
     <div class="col-xs-6">
-        <div class="schedule-box right">Ver horarios</div>
+        <div class="schedule-box right" ng-click="toogleSchedule()">Ver horarios</div>
     </div>
 </div>
-<div class="row schedule-list-row">
-<div class="col-xs-12">
-    <ul class="schedule-list">
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Lunes</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Martes</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Miércoles</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Jueves</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Viernes</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Sábado</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
-        </li>
-        <li>
-        <div class="row">
-            <span class="col-xs-6">Domingo</span>
-            <span class="col-xs-6">09:00 - 14:00 / 15:00 - 19:00</span>
-        </div>
+<div class="row schedule-list-row" ng-show="schedule.show">
+    <ul class="schedule-list col-xs-12">
+        <li ng-repeat="day in schedule.list">
+            <div class="row">
+                <span class="col-xs-6 day">{{ day.dayName }}</span>
+                <span class="col-xs-6 hours">{{ day.hours }}</span>
+            </div>
         </li>
     </ul>
-</div>
 </div>

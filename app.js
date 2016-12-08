@@ -21,7 +21,25 @@ blackShadder.config(function($routeProvider){
 })
 
 blackShadder.controller("mainController", ["$scope", function($scope){
-    $scope.text = "Example text in main";
+    $scope.schedule = {};
+
+    $scope.schedule.list = [
+        {dayName:"Lunes", hours:"9:00 - 14:00"},
+        {dayName:"Martes", hours:"9:00 - 14:00"},
+        {dayName:"Miércoles", hours:"9:00 - 14:00"},
+        {dayName:"Jueves", hours:"9:00 - 14:00"},
+        {dayName:"Viernes", hours:"9:00 - 14:00"},
+        {dayName:"Sábado", hours:"9:00 - 14:00"},
+        {dayName:"Domingo", hours:"9:00 - 14:00"},
+    ]
+
+    $scope.schedule.show = false;
+
+    $scope.toogleSchedule = function(){
+        $scope.schedule.show = !$scope.schedule.show;
+    }
+
+
 }]);
 
 blackShadder.controller("estudioController", ["$scope", function($scope){
