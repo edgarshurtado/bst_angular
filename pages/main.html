@@ -8,16 +8,20 @@
        <div class="schedule-box left">Abierto</div>
     </div>
     <div class="col-xs-6">
-        <div class="schedule-box right" ng-click="toogleSchedule()">Ver horarios</div>
+        <div class="schedule-box right" slide-toggle="#schedule-slideable">
+            Ver horarios
+        </div>
     </div>
 </div>
-<div class="row schedule-list-row" ng-show="schedule.show">
-    <ul class="schedule-list col-xs-12">
-        <li ng-repeat="day in schedule.list">
-            <div class="row">
-                <span class="col-xs-6 day">{{ day.dayName }}</span>
-                <span class="col-xs-6 hours">{{ day.hours }}</span>
-            </div>
-        </li>
-    </ul>
+<div class="slideable" id="schedule-slideable">
+    <div class="row schedule-list-row ">
+        <ul class="schedule-list col-xs-12">
+            <li ng-repeat="day in schedule.list">
+                <div class="row">
+                    <span class="col-xs-6 day">{{ day.dayName }}</span>
+                    <span class="col-xs-6 hours">{{ day.hours }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
