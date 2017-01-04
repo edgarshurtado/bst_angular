@@ -12,6 +12,7 @@ body {
     background-position: center;
     background-image: url('../images/inicio.jpg');
     background-attachment: fixed;
+    min-height: 100%;
 }
 
 .navbar {
@@ -19,9 +20,15 @@ body {
     border-radius: 0;
 }
 
+.page-content {
+    height:100%;
+    // The height of the nav and the footer respectively
+    // This trick allow the sticky footer
+    margin-top: -50px;
+    margin-bottom: -70px;
+}
 
 .main-page {
-
     img {
         margin-right: auto;
         margin-left: auto;
