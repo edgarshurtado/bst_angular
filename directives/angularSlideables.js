@@ -17,7 +17,7 @@ blackShadder.directive('slideable', function () {
                     'height': '0px',
                     'transitionProperty': 'height',
                     'transitionDuration': attrs.duration,
-                    'transitionTimingFunction': attrs.easing
+                    'transitionTimingFunction': attrs.easing,
                 });
             };
         }
@@ -35,6 +35,7 @@ blackShadder.directive('slideToggle', function() {
             element.bind('click', function() {
                 if (!target) target = document.querySelector(attrs.slideToggle);
                 if (!content) content = target.querySelector('.slideable_content');
+
 
                 if(!attrs.expanded) {
                     content.style.border = '1px solid rgba(0,0,0,0)';

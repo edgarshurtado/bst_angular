@@ -21,20 +21,25 @@ body {
 }
 
 .page-content {
-    height:100%;
+    min-height:100%;
     // The height of the nav and the footer respectively
     // This trick allow the sticky footer
     margin-top: -50px;
     margin-bottom: -70px;
 }
 
-.main-page {
+.logo-row-main-page {
+    margin-top:50px; // For keeping the page content below the nav-bar
     img {
         margin-right: auto;
         margin-left: auto;
         display: block;
         height: 60vh;
     }
+}
+
+.slideable {
+    margin-bottom: 70px;
 }
 
 .schedule-box {
