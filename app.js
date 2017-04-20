@@ -20,7 +20,9 @@ blackShadder.config(function($routeProvider){
     })
 })
 
-blackShadder.controller("mainController", ["$scope", function($scope){
+blackShadder.controller("mainController", [
+    "$scope", "$interval", "ScheduleService" ,function($scope, $interval, ScheduleService){
+
     $scope.schedule = {};
 
     $scope.schedule.list = [
@@ -39,7 +41,11 @@ blackShadder.controller("mainController", ["$scope", function($scope){
         $scope.schedule.show = !$scope.schedule.show;
     }
 
+    $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
 
+    $interval(function(){
+        $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
+    }, 1000);
 }]);
 
 blackShadder.controller("estudioController", ["$scope", function($scope){
