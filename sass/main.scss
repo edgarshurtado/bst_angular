@@ -1,4 +1,5 @@
 $primary-red: #9b1f17;
+$navbar-height: 50px;
 
 body, html {
     margin: 0;
@@ -36,6 +37,25 @@ body {
         display: block;
         height: 60vh;
     }
+}
+
+.content-with-top-margin{
+    margin-top: $navbar-height;
+}
+
+
+.galery-row.row {
+    margin:0;
+}
+
+.photo-card-holder{
+    padding: 5px ;
+}
+
+.photo-card{
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slideable {
@@ -93,6 +113,9 @@ body {
 }
 
 .page-footer {
+
+    clear: both;
+
     &.row {
         margin: 0;
     }

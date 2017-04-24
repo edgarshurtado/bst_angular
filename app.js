@@ -11,7 +11,7 @@ blackShadder.config(function($routeProvider){
         controller: 'estudioController'
     })
     .when('/galeria', {
-        templateUrl: 'pages/main.html',
+        templateUrl: 'pages/galeria.html',
         controller: 'galeriaController'
     })
     .when('/contacto', {
@@ -53,7 +53,20 @@ blackShadder.controller("estudioController", ["$scope", function($scope){
 }]);
 
 blackShadder.controller("galeriaController", ["$scope", function($scope){
-    $scope.text = "Example text in galeria";
+
+    $scope.photos = [
+        "leon.jpg",
+        "marilyn.jpg",
+        "reloj_rosa.jpg",
+        "foto_tattoorealista.jpg",
+        "egipcio_esfinge.jpg",
+        "gladiador.jpg",
+        "mapa_brujula.jpg",
+        "fenix.jpg",
+        "catrina.jpg",
+        "delfine.jpg"
+    ];
+
 }]);
 
 blackShadder.controller("contactoController", ["$scope", function($scope){
