@@ -50,12 +50,14 @@ body {
 
 .photo-card-holder{
     padding: 5px ;
-}
-
-.photo-card{
     height: 150px;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+
+    img{
+        position: absolute;
+        width: 100%;
+    }
 }
 
 .slideable {
