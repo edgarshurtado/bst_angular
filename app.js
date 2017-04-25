@@ -1,4 +1,4 @@
-var blackShadder = angular.module("blackShadderWeb", ['ngRoute']);
+var blackShadder = angular.module("blackShadderWeb", ['ngRoute', 'ui.bootstrap']);
 
 blackShadder.config(function($routeProvider){
     $routeProvider
