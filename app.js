@@ -64,7 +64,7 @@ blackShadder.controller("galeriaController", ["$scope", function($scope){
         "mapa_brujula.jpg",
         "fenix.jpg",
         "catrina.jpg",
-        "delfine.jpg"
+        "delfines.jpg"
     ];
 
 }]);
