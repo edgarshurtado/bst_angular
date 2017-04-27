@@ -18,7 +18,13 @@ blackShadder.config(function($routeProvider){
         templateUrl: 'pages/main.html',
         controller: 'contactoController'
     })
-})
+});
+
+blackShadder.controller('CollapseMenuCtrl', function ($scope) {
+  $scope.isNavCollapsed = true;
+  $scope.isCollapsed = false;
+  $scope.isCollapsedHorizontal = false;
+});
 
 blackShadder.controller("mainController", [
     "$scope", "$interval", "ScheduleService" ,function($scope, $interval, ScheduleService){
