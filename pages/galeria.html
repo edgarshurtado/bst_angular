@@ -1,13 +1,12 @@
+<div class="modal-box" ng-show="selected != null">
+    <img src="photos/{{selected}}" alt="">
+    <button class="btn btn-default" ng-click="selected = null">Null again</button>
+</div>
 <div class="content-with-top-margin">
     <h2>Galería de fotos</h2>
-
-    <div class="galery-row" >
+    <div class="galery-row">
         <div class="photo-card-holder col-xs-6" ng-repeat="photo in photos">
-            <img src="photos/{{photo}}" alt="">
+            <img src="photos/{{photo}}" alt="" ng-click="setSelected(photo)">
         </div>
-    </div>
-
-    <div>
-        caja modal
     </div>
 </div>

@@ -176,3 +176,28 @@ body {
     }
 }
 
+// Gallery classes
+
+.modal-box{
+    position:fixed;
+    z-index: 1000;
+    width : 100%;
+    height : 100%;
+    color: white;
+    background-color: black;
+    margin-left: -15px;
+
+    img {
+        position: absolute;
+        width:75%;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn.btn-default{
+        position: absolute;
+        bottom: 0;
+    }
+}
+

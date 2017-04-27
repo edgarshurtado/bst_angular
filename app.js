@@ -58,7 +58,7 @@ blackShadder.controller("estudioController", ["$scope", function($scope){
     $scope.text = "Example text in estudio";
 }]);
 
-blackShadder.controller("galeriaController", ["$scope", function($scope){
+blackShadder.controller("galeriaController", ["$scope", "$interval", function($scope, $interval){
 
     $scope.photos = [
         "leon.jpg",
@@ -73,6 +73,15 @@ blackShadder.controller("galeriaController", ["$scope", function($scope){
         "delfines.jpg"
     ];
 
+    $scope.selected = null;
+
+    $scope.setSelected = function(photoSelected){
+        $scope.selected = photoSelected;
+    }
+
+    $scope.$watch(function(){
+        console.log($scope.selected);
+    })
 }]);
 
 blackShadder.controller("contactoController", ["$scope", function($scope){
