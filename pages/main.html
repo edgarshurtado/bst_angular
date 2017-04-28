@@ -14,14 +14,10 @@
     </div>
 </div>
 <div class="slideable" id="schedule-slideable">
-    <div class="row schedule-list-row ">
-        <ul class="schedule-list col-xs-12">
-            <li ng-repeat="day in schedule.list">
-                <div class="row">
-                    <span class="col-xs-6 day">{{ day.dayName }}</span>
-                    <span class="col-xs-6 hours">{{ day.hours }}</span>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <ul class="schedule-list container">
+        <li class="row" ng-repeat="day in schedule.list">
+            <span class="col-xs-6 day">{{ day.dayName }}</span>
+            <span class="col-xs-6 hours">{{ day.hours }}</span>
+        </li>
+    </ul>
 </div>
