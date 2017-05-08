@@ -1,6 +1,8 @@
 <div class="modal-box" ng-show="selected != null">
+    <div class="close-modal-box" ng-click="selected = null">
+        <i class="fa fa-window-close-o" aria-hidden="true"></i>
+    </div>
     <img src="photos/{{selected}}" alt="">
-    <button class="btn btn-default" ng-click="selected = null">Null again</button>
 </div>
 <div class="content-with-top-margin">
     <h2>Galería de fotos</h2>
@@ -10,3 +12,4 @@
         </div>
     </div>
 </div>
+

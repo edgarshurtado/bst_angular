@@ -1,7 +1,8 @@
 $primary-red: #9b1f17;
 $navbar-height: 50px;
 
-body, html {
+html {
+    position:relative;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -9,11 +10,15 @@ body, html {
 }
 
 body {
+    min-height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     background-image: url('../images/inicio.jpg');
     background-attachment: fixed;
-    min-height: 100%;
+    display:flex;
+    flex-direction:column;
 }
 
 .navbar {
@@ -22,15 +27,13 @@ body {
 }
 
 .page-content {
-    min-height:100%;
-    // The height of the nav and the footer respectively
-    // This trick allow the sticky footer
-    margin-top: -50px;
-    margin-bottom: -70px;
+    padding-top: $navbar-height;
+    width: 100%;
+    flex: 1;
+    padding-bottom: 10px;
 }
 
 .logo-row-main-page {
-    margin-top:50px; // For keeping the page content below the nav-bar
     img {
         margin-right: auto;
         margin-left: auto;
@@ -38,11 +41,6 @@ body {
         height: 60vh;
     }
 }
-
-.content-with-top-margin{
-    margin-top: $navbar-height;
-}
-
 
 .galery-row.row {
     margin:0;
@@ -61,7 +59,7 @@ body {
 }
 
 .slideable {
-    margin-bottom: 70px;
+    margin-top: 10px;
 }
 
 .schedule-box {
@@ -95,14 +93,9 @@ body {
     }
   }
 }
-.schedule-list-row{
-    margin: 15px 2px 0 2px;
-}
 
 .schedule-list{
     background-color: rgba(256,256,256, 0.3);
-    margin-right: auto;
-    margin-left: auto;
     list-style-type: none;
 
     .day {
@@ -116,12 +109,6 @@ body {
 
 .page-footer {
 
-    clear: both;
-
-    &.row {
-        margin: 20px 0 0 0;
-    }
-    width: 100%;
     height:70px;
 
     background-color: black;
@@ -192,12 +179,18 @@ body {
         width:75%;
         left:50%;
         top:50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -55%);
     }
 
-    .btn.btn-default{
+    .close-modal-box {
         position: absolute;
-        bottom: 0;
+        top: 15px;
+        right: 25px;
+        font-size: 2em;
+
+        .fa {
+            color: grey;
+        }
     }
 }
 
