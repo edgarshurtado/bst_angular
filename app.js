@@ -49,9 +49,6 @@ blackShadder.controller("mainController", [
 
     $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
 
-    $interval(function(){
-        $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
-    }, 1000);
 }]);
 
 blackShadder.controller("estudioController", ["$scope", function($scope){
@@ -79,9 +76,6 @@ blackShadder.controller("galeriaController", ["$scope", "$interval", function($s
         $scope.selected = photoSelected;
     }
 
-    $scope.$watch(function(){
-        console.log($scope.selected);
-    })
 }]);
 
 blackShadder.controller("contactoController", ["$scope", function($scope){
