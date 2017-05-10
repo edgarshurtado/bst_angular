@@ -2,13 +2,13 @@
     <div class="close-modal-box" ng-click="selected = null">
         <i class="fa fa-window-close-o" aria-hidden="true"></i>
     </div>
-    <img src="photos/{{selected}}" alt="">
+    <img ng-if="selected !== null" ng-src="photos/{{selected}}" alt="">
 </div>
 <div class="content-with-top-margin">
     <h2>Galería de fotos</h2>
     <div class="galery-row">
         <div class="photo-card-holder col-xs-6" ng-repeat="photo in photos">
-            <img src="photos/{{photo}}" alt="" ng-click="setSelected(photo)">
+            <img ng-src="photos/{{photo}}" alt="" ng-click="setSelected(photo)">
         </div>
     </div>
 </div>
