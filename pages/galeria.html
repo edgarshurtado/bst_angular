@@ -7,7 +7,7 @@
 <div class="content-with-top-margin">
     <h2>Galería de fotos</h2>
     <div class="galery-row">
-        <div class="photo-card-holder col-xs-6" ng-repeat="photo in photos">
+        <div class="photo-card-holder col-xs-6 col-sm-3 col-md-2" ng-repeat="photo in photos">
             <img ng-src="photos/{{photo}}" alt="" ng-click="setSelected(photo)">
         </div>
     </div>
