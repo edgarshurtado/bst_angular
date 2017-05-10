@@ -42,17 +42,6 @@ body {
     }
 }
 
-.photo-card-holder{
-    padding: 5px ;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
-
-    img{
-        position: absolute;
-        width: 100%;
-    }
-}
 
 .slideable {
     margin-top: 10px;
@@ -172,10 +161,11 @@ body {
 
     img {
         position: absolute;
-        width:75%;
         left:50%;
-        top:50%;
-        transform: translate(-50%, -55%);
+        top: 55px;
+        max-height: 80vh;
+        max-width:80vw;
+        transform: translate(-50%, 0);
     }
 
     .close-modal-box {
