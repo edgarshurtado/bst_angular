@@ -1,6 +1,10 @@
 $primary-red: #9b1f17;
 $navbar-height: 50px;
 
+@font-face {
+  font-family: quartzo;
+  src: url(fonts/QUARTZO-demo.ttf); }
+
 html {
     position:relative;
     margin: 0;
@@ -198,5 +202,25 @@ body {
         transform: translate(0, -50%);
         width: 100%;
     }
+}
+
+h2 {
+    font-family: quartzo;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+
+}
+
+h2:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 12%;
+    right: 12%;
+    top: -5px;
+    bottom: 0px;
+    border-bottom: #9b1f17 3px solid;
+    border-top: #9b1f17 3px solid;
 }
 
