@@ -15,7 +15,7 @@ blackShadder.config(function($routeProvider){
         controller: 'galeriaController'
     })
     .when('/contacto', {
-        templateUrl: 'pages/main.html',
+        templateUrl: 'pages/contacto.html',
         controller: 'contactoController'
     })
 });
