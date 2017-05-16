@@ -199,15 +199,23 @@ body {
     }
 }
 
-h2 {
+// Headers
+
+// For h2 header
+.title {
     font-family: quartzo;
     position: relative;
     display: inline-block;
     font-weight: bold;
+    text-align: center;
+
+    &.title-contacto {
+        font-size: 1.9em;
+    }
 
 }
 
-h2:before {
+.title:before {
     content: '';
     position: absolute;
     z-index: 2;
