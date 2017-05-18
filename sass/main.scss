@@ -211,8 +211,16 @@ body {
 
     &.title-contacto {
         font-size: 2em;
+
+        @media (min-width: 992px){
+            font-size: 3em;
+        }
     }
 
+}
+
+.underlined {
+    text-decoration: underline;
 }
 
 .title:before {
