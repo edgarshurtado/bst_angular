@@ -4,68 +4,68 @@ blackShadder.service('ScheduleService', function(){
     this.scheduleList = {
         0:{
             morning: {
-                opening: "9:00",
-                close:"14:00"
+                opening: null,
+                close: null
             },
             afternoon: {
-                opening: "16:00",
-                close: "20:00"
+                opening: null,
+                close: null
             }
         },
         1:{
             morning: {
-                opening: "9:00",
+                opening: "11:00",
                 close:"14:00"
             },
             afternoon: {
-                opening: "16:00",
+                opening: "14:00",
                 close: "20:00"
             }
         },
         2:{
             morning: {
-                opening: "9:00",
+                opening: "11:00",
                 close:"14:00"
             },
             afternoon: {
-                opening: "16:00",
+                opening: "14:00",
                 close: "20:00"
             }
         },
         3:{
             morning: {
-                opening: "9:00",
+                opening: "11:00",
                 close:"14:00"
             },
             afternoon: {
-                opening: "16:00",
-                close: "22:00"
+                opening: "14:00",
+                close: "20:00"
             }
         },
         4:{
             morning: {
-                opening: "9:00",
+                opening: "11:00",
                 close:"14:00"
             },
             afternoon: {
-                opening: "16:00",
-                close: "21:09"
+                opening: "14:00",
+                close: "20:00"
             }
         },
         5:{
             morning: {
-                opening: "9:00",
+                opening: "11:00",
                 close:"14:00"
             },
             afternoon: {
-                opening: "16:00",
+                opening: "14:00",
                 close: "20:00"
             }
         },
         6:{
             morning: {
-                opening: "9:00",
-                close:"14:00"
+                opening: null,
+                close: null
             },
             afternoon: {
                 opening: "16:00",
@@ -114,6 +114,9 @@ blackShadder.service('ScheduleService', function(){
 
     this.isNowInTimeRange = function(openingTime, closingTime)
     {
+
+        if(openingTime === null) return false; // Closed days
+
         var rightNow = new Date();
 
         openingTime = openingTime.split(":")
