@@ -9,4 +9,8 @@
             <p>E-mail: <a href="mailto:blackSadder@gmail.es">blackSadder@gmail.es</a></p>
         </div>
     </div>
+    <ui-gmap-google-map class="margin-top" center='map.center' zoom='map.zoom'>
+        <ui-gmap-circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
+                visible="c.visible" geodesic="c.geodesic" editable="c.editable" draggable="c.draggable" clickable="c.clickable" control="c.control"></ui-gmap-circle>
+    </ui-gmap-google-map>
 </div>

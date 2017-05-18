@@ -1,6 +1,8 @@
-var blackShadder = angular.module("blackShadderWeb", ['ngRoute', 'ui.bootstrap']);
+var blackShadder = angular.module("blackShadderWeb",
+    ['ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps']
+);
 
-blackShadder.config(function($routeProvider){
+blackShadder.config(function($routeProvider, uiGmapGoogleMapApiProvider){
     $routeProvider
     .when('/', {
         templateUrl: 'pages/main.html',
@@ -18,6 +20,12 @@ blackShadder.config(function($routeProvider){
         templateUrl: 'pages/contacto.html',
         controller: 'contactoController'
     })
+
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyD_Z0GltWXy-TNKeIdvMqmQ-yScydmlmbA',
+        v: '3.20',
+        libraries: 'weather,geometry,visualization'
+    });
 });
 
 blackShadder.controller("estudioController", ["$scope", function($scope){
