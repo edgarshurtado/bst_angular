@@ -21,4 +21,8 @@ blackShadder.controller("mainController", [
 
     $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
 
+    $interval(function(){
+        $scope.currentStatus = ScheduleService.isOpen() ? "Abierto" : "Cerrado";
+    }, 1000);
+
 }]);
