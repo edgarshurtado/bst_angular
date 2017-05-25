@@ -68,8 +68,8 @@ blackShadder.service('ScheduleService', function(){
                 close: null
             },
             afternoon: {
-                opening: "16:00",
-                close: "20:00"
+                opening: null,
+                close: null
             }
         },
     };
