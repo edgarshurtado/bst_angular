@@ -3,8 +3,8 @@ blackShadder.controller("galeriaController", ["$scope", "$interval", function($s
     // TODO: Have a backend to serve the images
     $scope.photos = [
         "leon_ivan_morant",
-        "caraninyo",
         "durotan_ivan_morant",
+        'mascara_gas_ivan_morant',
         "harley_ivan_morant",
         "retrato2_ivan_morant",
         "eduardo_manos_tijeras_ivan_morant",
