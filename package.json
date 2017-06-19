@@ -1,15 +1,8 @@
 {
   "name": "black_shadder_angular",
   "version": "1.0.0",
-  "description": "Side-project of a tattoo web site",
+  "description": "This is a web page I'm making for a friend. I'm using this side-project to practice the development of a web page with the following technologies:",
   "main": "index.html",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-responsive-images": "^1.10.1",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/edgarshurtado/bst_angular/issues"
   },
-  "homepage": "https://github.com/edgarshurtado/bst_angular#readme"
+  "homepage": "https://github.com/edgarshurtado/bst_angular#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  }
 }
