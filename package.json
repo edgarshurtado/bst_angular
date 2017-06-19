@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Side-project of a tattoo web site",
   "main": "index.html",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-responsive-images": "^1.10.1"
+    "grunt-responsive-images": "^1.10.1",
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
