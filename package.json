@@ -1,0 +1,24 @@
+{
+  "name": "black_shadder_angular",
+  "version": "1.0.0",
+  "description": "Side-project of a tattoo web site",
+  "main": "index.html",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-responsive-images": "^1.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarshurtado/bst_angular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgarshurtado/bst_angular/issues"
+  },
+  "homepage": "https://github.com/edgarshurtado/bst_angular#readme"
+}
