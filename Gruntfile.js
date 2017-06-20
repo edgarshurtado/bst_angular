@@ -23,24 +23,25 @@ module.exports = function(grunt) {
               name: 'large_1x',
               width: 800,
               quality: 30
+            },
+            {
+              name: 'small_1x',
+              width: 300,
+              quality: 30
             }
           ]
         },
 
-        /*
-        You don't need to change this part if you don't change
-        the directory structure.
-        */
         files: [{
           expand: true,
-          src: ['*.{gif,jpg,png}'],
+          src: ['*.{gif,jpg}'],
           cwd: 'photos/',
           dest: 'photos_dev/'
         }]
       }
     },
 
-    /* Clear out the images directory if it exists */
+    /* Clear out the source directory if it exists */
     clean: {
       dev: {
         src: ['photos_dev'],
