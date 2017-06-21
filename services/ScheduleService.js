@@ -100,7 +100,7 @@ blackShadder.service('ScheduleService', function(){
 
         var todaySchedule = self.scheduleList[day];
 
-        if(hours < 12){
+        if(hours < 14){
             var scheduleHours = todaySchedule["morning"];
 
         }else {
