@@ -54,12 +54,12 @@ blackShadder.service('ScheduleService', function(){
         },
         5:{
             morning: {
-                opening: "11:00",
-                close:"14:00"
+                opening: "10:30",
+                close:"13:30"
             },
             afternoon: {
-                opening: "14:00",
-                close: "20:00"
+                opening: null,
+                close: null
             }
         },
         6:{
