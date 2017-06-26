@@ -10,7 +10,10 @@
     </div>
     <div class="gallery-row">
         <div class="photo-card-holder col-xs-6 col-sm-3 col-md-2" ng-repeat="photo in photos">
-            <img ng-src="photos_dev/{{photo}}_square-small_1x.jpg" alt="" ng-click="setSelected(photo)">
+          <img picturefill 
+          ng-attr-srcset="photos_dev/{{photo}}_square-small_1x.jpg 1x, photos_dev/{{photo}}_square-small_2x.jpg 2x"
+          alt="" ng-click="setSelected(photo)"
+          >
         </div>
     </div>
 </div>
