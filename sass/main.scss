@@ -251,14 +251,29 @@ body {
     border-top: #9b1f17 3px solid;
 }
 
-.contacto-info-box {
+@mixin box-general-styles(){
     background-color: rgba(255,255,255, 0.5);
     border-radius: 15px;
 
     padding: 20px;
+}
+
+.main-info-box {
+    @include box-general-styles();
+    font-size: 1.8em;
+    text-align: center;
+
+    @media (min-width: 992px){
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.contacto-info-box {
+    @include box-general-styles();
 
     font-size: 1.2em;
-
     text-align: justify;
 }
 
