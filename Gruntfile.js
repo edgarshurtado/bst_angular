@@ -10,23 +10,18 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     responsive_images: {
-      dev: {
+      full_images: {
         options: {
           engine: 'im',
           sizes: [
             {
-              name: 'large_2x',
+              name: '2x',
               width: 1600,
               quality: 30
             },
             {
-              name: 'large_1x',
+              name: '1x',
               width: 800,
-              quality: 30
-            },
-            {
-              name: 'small_1x',
-              width: 300,
               quality: 30
             }
           ]
@@ -34,7 +29,31 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true,
-          src: ['*.{gif,jpg}'],
+          src: ['*_full.{gif,jpg}'],
+          cwd: 'photos/',
+          dest: 'photos_dev/'
+        }]
+      },
+      squares: {
+        options: {
+          engine: 'im',
+          sizes: [
+            {
+              name: '1x',
+              width: 200,
+              quality: 30
+            },
+            {
+              name: '2x',
+              width: 400,
+              quality: 30
+            }
+          ]
+        },
+
+        files: [{
+          expand: true,
+          src: ['*_square.{gif,jpg}'],
           cwd: 'photos/',
           dest: 'photos_dev/'
         }]

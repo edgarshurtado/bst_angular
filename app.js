@@ -1,5 +1,5 @@
 var blackShadder = angular.module("blackShadderWeb",
-    ['ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps']
+    ['ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps', 'ngPicturefill']
 );
 
 blackShadder.config(function($routeProvider, uiGmapGoogleMapApiProvider){
@@ -19,7 +19,7 @@ blackShadder.config(function($routeProvider, uiGmapGoogleMapApiProvider){
     .when('/contacto', {
         templateUrl: 'pages/contacto.html',
         controller: 'contactoController'
-    })
+    });
 
     uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyD_Z0GltWXy-TNKeIdvMqmQ-yScydmlmbA',
