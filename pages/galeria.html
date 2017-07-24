@@ -10,11 +10,11 @@
     </div>
     <div class="gallery-row">
         <div class="photo-card-holder col-xs-6 col-sm-3 col-md-2" ng-repeat="photo in photos">
-          <img picturefill 
+          <img picturefill
             ng-attr-srcset="photos_dev/{{photo}}_square-1x.jpg 1x, photos_dev/{{photo}}_square-2x.jpg 2x"
             alt="" ng-click="setSelected(photo)"
           >
         </div>
+        <button ng-hide="hideLoadImagesBtn" class="btn btn-default col-xs-12" ng-click="loadImagesBatch()">Cargar más</button>
     </div>
 </div>
-
