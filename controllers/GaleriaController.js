@@ -1,25 +1,32 @@
-blackShadder.controller("galeriaController", ["$scope", "$interval", function($scope, $interval){
+blackShadder.controller("galeriaController", ["$scope", "$interval", "ImagesService", function($scope, $interval, ImagesService){
 
-    // TODO: Have a backend to serve the images
-    $scope.photos = [
-        "leon_ivan_morant",
-        "durotan_ivan_morant",
-        'mascara_gas_ivan_morant',
-        "harley_ivan_morant",
-        "retrato2_ivan_morant",
-        "eduardo_manos_tijeras_ivan_morant",
-        "lobo_ivan_morant",
-        "catrina_ivan_morant"
-        // "brujula_reloj_mapa_ivan_morant.jpg",
-        // "mascara_gas_ivan_morant.jpg",
-        // "pierna_300_ivan_morant.jpg",
-        // "samurai_dragon_ivan_morant.jpg"
-    ];
+    var batchSize = 8;
+    var numberOfImagesToBeLoaded = ImagesService.getNumberOfImages();
 
+    $scope.photos = [];
     $scope.selected = null;
+    $scope.hideLoadImagesBtn = checkAllPhotosAreLoaded();
 
     $scope.setSelected = function(photoSelected){
         $scope.selected = photoSelected;
     }
 
+    $scope.loadImagesBatch = function(){
+        var batchStartIndex = $scope.photos.length;
+        var newBatch = ImagesService.getNextBatch(batchStartIndex, batchSize)
+
+        $scope.photos = $scope.photos.concat(newBatch);
+
+        $scope.hideLoadImagesBtn = checkAllPhotosAreLoaded();
+    }
+
+    $scope.loadImagesBatch();
+
+    function checkAllPhotosAreLoaded(){
+        if( numberOfImagesToBeLoaded === $scope.photos.length ){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }]);
