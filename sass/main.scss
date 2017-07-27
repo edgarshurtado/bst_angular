@@ -159,22 +159,26 @@ body {
     margin-left: -15px;
 
     img {
+        max-width: 80vh;
+        max-height: 80vh;
+    }
+
+    .image-holder{
         position: absolute;
+        display: inline-block;
         left:50%;
         top: 55px;
-        max-height: 80vh;
-        max-width:80vw;
         transform: translate(-50%, 0);
     }
 
     .close-modal-box {
         position: absolute;
-        top: 15px;
-        right: 25px;
+        top: -30px;
+        right: -30px;
         font-size: 2em;
 
         .fa {
-            color: grey;
+            color: rgb(170,170,170);
         }
     }
 }
