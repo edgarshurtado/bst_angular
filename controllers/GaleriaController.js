@@ -1,6 +1,6 @@
 blackShadder.controller("galeriaController", ["$scope", "$interval", "ImagesService", function($scope, $interval, ImagesService){
 
-    var batchSize = 8;
+    var batchSize = 12;
     var numberOfImagesToBeLoaded = ImagesService.getNumberOfImages();
 
     $scope.photos = [];
